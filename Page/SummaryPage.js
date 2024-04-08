@@ -1,9 +1,8 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import transactionState from "../transactionState";
 import SummaryLabel from "../components/SummaryLabel";
 
-export default function SummaryPage() {
+export default function SummaryPage({ transactionState }) {
   const totalNumberOfTransactions = transactionState.length;
   let totalBalance = 0;
   for (let i = 0; i < transactionState.length; i++) {
